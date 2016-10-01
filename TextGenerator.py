@@ -15,15 +15,9 @@ def generator(n,s):
 
     return text
 
-
-
 n = input('Enter the length of the random text you want : ')
 n = int(n)
 s = input('Enter the frequency [0,1) of spaces you want : ')
 s = float(s)
 
 print(generator(n,s))
-
-#textLength = n*(random.random())
-#textLength = int(textLength)
-#letter2 = random.choice(string.ascii_letters)
