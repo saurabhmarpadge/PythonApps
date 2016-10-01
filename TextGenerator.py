@@ -1,13 +1,17 @@
 import random,string
 
-def generator(n):
+def generator(n,s):
     i = 0
     textList = []
     text = ''
     while i<n:
-        textList.insert(i,random.choice(string.ascii_letters))
-        text = text + textList[i]
-        i = i + 1
+        randomSpaceIndex = random.random()
+        if randomSpaceIndex >= s:
+            textList.insert(i,random.choice(string.ascii_letters))
+            text = text + textList[i]
+            i = i + 1
+        else:
+            text = text + ' '
 
     return text
 
@@ -15,8 +19,10 @@ def generator(n):
 
 n = input('Enter the length of the random text you want : ')
 n = int(n)
+s = input('Enter the frequency [0,1) of spaces you want : ')
+s = float(s)
 
-print(generator(n))
+print(generator(n,s))
 
 #textLength = n*(random.random())
 #textLength = int(textLength)
