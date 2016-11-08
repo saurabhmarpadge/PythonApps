@@ -1,3 +1,6 @@
+# Run this file
+# Make sure first frame is static - don't sit in front of the cam initially
+
 from motion_detector import df
 from bokeh.plotting import figure, show, output_file
 from bokeh.models import HoverTool, ColumnDataSource
